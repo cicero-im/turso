@@ -1,5 +1,6 @@
 package tech.turso.core;
 
+import java.nio.file.Files;
 import static tech.turso.utils.ByteArrayUtils.stringToUtf8ByteArray;
 
 import java.io.File;
@@ -162,7 +163,7 @@ public final class LimboDB implements AutoCloseable {
 
   private static File convertInputStreamToFile(InputStream is, Architecture arch)
       throws IOException {
-    File tempFile = File.createTempFile("lib", arch.getFileExtension());
+    File tempFile = Files.createTempFile("lib", arch.getFileExtension()).toFile();
     tempFile.deleteOnExit();
 
     try (FileOutputStream os = new FileOutputStream(tempFile)) {
