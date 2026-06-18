@@ -38,6 +38,6 @@
     "vite": "^6.0.7",
     "vite-plugin-wasm": "^3.4.1",
     "vitest": "^2.1.8",
-    "wasm-pack": "^0.13.1"
+    "wasm-pack": "^0.15.0"
   }
 }
